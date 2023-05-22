@@ -1,0 +1,167 @@
+{
+    "QMainWindow":[
+        {
+            "frameless": true,
+            "transluscentBg": true,
+            "sizeGrip": "sizeGrip",
+            "navigation":[
+                {
+                    "minimize":"minimizeBtn",
+                    "close": "closeBtn",
+                    "restore":[
+                        {
+                            "buttonName": "restoreBtn",
+                            "normalIcon": "icons/feather/square.svg",
+                            "maximizedIcon": "icons/feather/copy.svg"
+                        }
+                    ],
+                    "moveWindow": "headerContainer",
+                    "tittleBar": "headerContainer"
+                }
+            ]
+        }
+    ],
+    "QCustomSlideMenu": [
+        {
+            "name": "leftMenuContainer",
+            "defaultSize": [{
+                "width": 38,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 38,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 140,
+                "height": "parent"
+            }],
+            "toggleButton": [{
+                "buttonName": "menuBtn",
+                "icons": [{
+                    "whenMenuIsCollapsed": "icons/feather/menu.svg",
+                    "whenMenuIsExpanded": "icons/feather/chevron-left.svg"
+                }]
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "profileContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 230,
+                "height": "auto"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }]
+        },
+        {
+            "name": "popupNotificationContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 900,
+                "height": 100
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 500,
+                "animationEasingCurve": "Linear"
+            }],
+            "floatPosition": [
+                {
+                    "relativeTo": "centralwidget",
+                    "position": "center-center",
+                    "shadow":[
+                        {
+                            "color": "#000",
+                            "blurRadius": 20,
+                            "xOffset": 0,
+                            "yOffset": 0
+                        }
+                    ]
+                }
+            ],
+            "toggleButton": [{
+                "buttonName": "notificationBtn"
+            }]
+        }   
+    ],
+    "QStackedWidget":[
+        {
+            "name":"mainPages",
+            "navigation":[
+                {
+                    "navigationButtons":[
+                        {
+                            "projectsBtn": "pageProjects",
+                            "tasksBtn": "pageTasks",
+                            "statisticsBtn": "pageStatistics"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"profileStackedWidget",
+            "transitionAnimation":[
+				{
+					"fade":[
+						{
+							"active": true,
+							"duration":1000,
+							"easingCurve": "OutBack"
+						}
+					],
+					"slide":[
+						{
+							"active":true,
+							"duration": 1000,
+							"direction": "horizontal",
+							"easingCurve": "OutBack"
+						}
+					]
+				}
+			],
+			"navigation":[
+				{
+					"nextPage":"btnAlready",
+					"previousPage": "btnNoAcc"
+				}
+			]
+		}
+    ],
+    "QPushButtonGroup": [
+        {
+            "Buttons": [
+                "projectsBtn",
+                "tasksBtn",
+                "statisticsBtn"
+            ],
+            "Style":[
+                {
+                    "Active": "background-color: #25547B;",
+                    "NotActive": ""
+                }
+            ]
+        }
+    ]
+}
+
