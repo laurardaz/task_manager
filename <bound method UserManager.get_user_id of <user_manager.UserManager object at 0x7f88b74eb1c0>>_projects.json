@@ -1,0 +1,42 @@
+[
+    {
+        "name": "test3",
+        "description": "",
+        "priority": "Высокий",
+        "progress": "0.0 % [0 / 1]",
+        "start_date": "19/05/2023",
+        "end_date": "19/05/2023",
+        "status": "В планах",
+        "tasks": [
+            {
+                "name": "new3",
+                "project_name": "test3",
+                "description": "что-то",
+                "priority": "Низкий",
+                "start_date": "19/05/2023",
+                "end_date": "19/05/2023",
+                "status": "В планах"
+            }
+        ]
+    },
+    {
+        "name": "test4",
+        "description": "",
+        "priority": "Средний",
+        "progress": "No tasks yet",
+        "start_date": "20/05/2023",
+        "end_date": "20/05/2023",
+        "status": "В процессе",
+        "tasks": []
+    },
+    {
+        "name": "test5",
+        "description": "Описание чегото",
+        "priority": "Низкий",
+        "progress": "No tasks yet",
+        "start_date": "20/05/2023",
+        "end_date": "20/05/2023",
+        "status": "В процессе",
+        "tasks": []
+    }
+]

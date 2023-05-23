@@ -1,0 +1,169 @@
+@startuml
+
+class Project {
+    + name
+    + description
+    + priority
+    + progress
+    + end_date
+    + status
+    + action
+    + tasks
+
+    + tasks_count()
+}
+
+class Task {
+    + name
+    + project.name
+    + description
+    + priority
+    + end_date
+    + status
+    + action
+}
+
+class ProjectManager {
+    + user_id
+    + projects
+
+    + add_project(name, description, priority, progress, start_date, end_date, status, tasks)
+    + delete_projects()
+    + write_json()
+    + get_projects()
+    + get_project_count()
+    + get_projects()
+    + get_project_by_name()
+    + get_project_names()
+}
+
+class ProjectCreator {
+    + create_empty()
+}
+
+class ProjectEncoder {
+    + default(object)
+}
+
+class TaskManager {
+    + tasks
+
+    + add_task(project, name, description, priority, start_date, end_date, status)
+    + delete_tasks()
+    + get_all_tasks()
+    + get_tasks()
+    + sync_tasks()
+    + count_tasks()
+    + get_task_by_name()
+}
+
+class MainWindow {
+    + project_manager
+    + task_manager
+    + ui
+    + statistics_
+    + user_manager
+
+    + fill_data(user_id)
+    + update_tasks_statistics()
+    + update_projects_statistics()
+    + event_filter_task(source, event)
+    + signup_function()
+    + login_function()
+    + removeCurrentProjectRow()
+    + update_project_and_save()
+    + editCurrentProjectRow()
+    + infoCurrentProjectRow()
+    + removeCurrentTaskRow()
+    + update_task_and_save()
+    + editCurrentTaskRow()
+    + infoCurrentTaskRow()
+    + update_tasks()
+    + update_projects()
+}
+
+interface free_functions
+{
+    + JsonDecoder(dictionary)
+}
+
+class PlanPeriod {
+    + DAY
+    + WEEK
+    + MONTH
+    + YEAR
+    + INFINITY
+}
+
+class Status {
+    + TODO
+    + IN_PROGRESS
+    + DONE
+}
+
+class Priority {
+    + MINOR
+    + MEDIUM
+    + MAJOR
+}
+
+class TaskStatistics {
+    + count_todo()
+    + count_in_progress()
+    + count_done()
+    + progress()
+
+    -count(status, period, tasks)
+}
+
+class ProjectStatistics {
+    + count_todo()
+    + count_in_progress()
+    + count_done()
+
+    -count(status, period)
+}
+
+class User {
+    + id
+    + user_name
+    + password
+    + email
+}
+
+class UserManager {
+    + users
+    
+    + max_id()
+    + add_new_user()
+    + write_user_json()
+    + check_user()
+    + get_user_id()
+    + set_current_user()
+}
+
+class UserEncoder {
+    + default(object)
+}
+
+Task --o Project
+MainWindow *-- TaskManager
+MainWindow *-- ProjectManager
+MainWindow *-- TaskStatistics
+MainWindow *-- ProjectStatistics
+MainWindow *-- UserManager
+MainWindow *-- ProjectCreator
+ProjectManager ..> free_functions : use
+Task *-- Status
+Task *-- PlanPeriod
+Task *-- Priority
+Project *-- Status
+Project *-- PlanPeriod
+TaskManager o-- Task
+ProjectManager o-- Project
+UserManager o-- User
+ProjectManager ..> ProjectEncoder : use
+UserManager ..> UserEncoder : use
+
+
+@enduml

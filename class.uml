@@ -1,0 +1,117 @@
+@startuml
+
+class Project {
+    + name
+    + priority
+    + progress
+    + end_date
+    + status
+    + action
+    + tasks
+
+    + tasks_count()
+}
+
+class Task {
+    + name
+    + project
+    + priority
+    + end_date
+    + status
+    + action
+}
+
+class ProjectManager {
+    + projects
+
+    + add_project(name, priority, progress, end_date, status, action, tasks)
+    + write_json()
+    + get_current_project()
+    + get_project_count()
+    + get_projects()
+}
+
+class ProjectEncoder {
+    + default(object)
+}
+
+class TaskManager {
+    + tasks
+
+    + add_task(project, name, current_text, priority, date, status, action)
+    + get_tasks()
+}
+
+class MainWindow {
+    + project_manager
+    + task_manager
+    + ui
+    + task_statistics
+    + project_statistics
+
+    + update_projects()
+    + update_tasks()
+    + on_project_save()
+    + on_task_save()
+    + update_tasks_statistics()
+    + update_projects_statistics()
+    + event_filter_task(source, event)
+    + signup_function()
+    + login_function()
+}
+
+interface free_functions
+{
+    + JsonDecoder(dictionary)
+}
+
+class Status {
+    + TODO
+    + IN_PROGRESS
+    + DONE
+}
+
+class Priority {
+    + MINOR
+    + MEDIUM
+    + MAJOR
+}
+
+class TaskStatistics {
+    + count_todo()
+    + count_in_progress()
+    + count_done()
+
+    -count(status)
+}
+
+class ProjectStatistics {
+    + count_todo()
+    + count_in_progress()
+    + count_done()
+
+    -count(status)
+}
+
+class User {
+    + login
+    + password
+    + email
+}
+
+Task --o Project
+MainWindow *-- TaskManager
+MainWindow *-- ProjectManager
+MainWindow *-- TaskStatistics
+MainWindow *-- ProjectStatistics
+MainWindow *-- User
+ProjectManager ..> free_functions : use
+Task *-- Status
+Task *-- Priority
+Project *-- Status
+Project *-- Priority
+TaskManager o-- Task
+ProjectManager o-- Project
+ProjectManager ..> ProjectEncoder : use
+
+@enduml

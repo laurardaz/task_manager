@@ -1,0 +1,71 @@
+[
+    {
+        "name": "test3",
+        "description": "",
+        "priority": "Средний",
+        "progress": "0.0 % [0 / 1]",
+        "start_date": "19/05/2023",
+        "end_date": "22/05/2023",
+        "status": "Завершено",
+        "tasks": [
+            {
+                "name": "new3",
+                "project_name": "test3",
+                "description": "что-то",
+                "priority": "Низкий",
+                "start_date": "19/05/2023",
+                "end_date": "23/05/2023",
+                "status": "В процессе"
+            }
+        ]
+    },
+    {
+        "name": "test4",
+        "description": "",
+        "priority": "Средний",
+        "progress": "0.0 % [0 / 1]",
+        "start_date": "20/05/2023",
+        "end_date": "20/05/2023",
+        "status": "В процессе",
+        "tasks": [
+            {
+                "name": "new4",
+                "project_name": "test4",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "20/05/2023",
+                "end_date": "27/05/2023",
+                "status": "В планах"
+            }
+        ]
+    },
+    {
+        "name": "test5",
+        "description": "Описание чегото",
+        "priority": "Низкий",
+        "progress": "50.0 % [1 / 2]",
+        "start_date": "20/05/2023",
+        "end_date": "20/05/2023",
+        "status": "В процессе",
+        "tasks": [
+            {
+                "name": "new5",
+                "project_name": "test5",
+                "description": "",
+                "priority": "Низкий",
+                "start_date": "20/05/2023",
+                "end_date": "23/05/2023",
+                "status": "В процессе"
+            },
+            {
+                "name": "new5/5",
+                "project_name": "test5",
+                "description": "",
+                "priority": "Низкий",
+                "start_date": "20/05/2023",
+                "end_date": "23/05/2023",
+                "status": "В процессе"
+            }
+        ]
+    }
+]

@@ -1,0 +1,77 @@
+[
+    {
+        "name": "sdf",
+        "description": "",
+        "priority": "Высокий",
+        "progress": "16.67 % [1 / 6]",
+        "start_date": "14/05/2023",
+        "end_date": "14/05/2023",
+        "status": "В планах",
+        "tasks": [
+            {
+                "name": "rtg",
+                "project_name": "sdf",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "14/05/2023",
+                "end_date": "14/05/2023",
+                "status": "В планах"
+            },
+            {
+                "name": "yui",
+                "project_name": "sdf",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "14/05/2023",
+                "end_date": "14/05/2023",
+                "status": "Завершено"
+            },
+            {
+                "name": "yuidgf",
+                "project_name": "sdf",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "14/05/2023",
+                "end_date": "14/05/2023",
+                "status": "В процессе"
+            },
+            {
+                "name": "dgds",
+                "project_name": "sdf",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "14/05/2023",
+                "end_date": "14/05/2023",
+                "status": "В планах"
+            },
+            {
+                "name": "sfs",
+                "project_name": "sdf",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "14/05/2023",
+                "end_date": "14/05/2023",
+                "status": "В планах"
+            },
+            {
+                "name": "sf",
+                "project_name": "sdf",
+                "description": "",
+                "priority": "Высокий",
+                "start_date": "14/05/2023",
+                "end_date": "14/05/2023",
+                "status": "В планах"
+            }
+        ]
+    },
+    {
+        "name": "afwe",
+        "description": "",
+        "priority": "Высокий",
+        "progress": "No tasks yet",
+        "start_date": "14/05/2023",
+        "end_date": "14/05/2023",
+        "status": "В планах",
+        "tasks": []
+    }
+]
